@@ -22,5 +22,35 @@ Lab5_TextEditor
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:Lab5_TextEditor.TextEditorForm.SaveAs">
+ <summary>
+     Prompts the SaveFileDialog box to save a new file
+ </summary>
+</member>
+<member name="M:Lab5_TextEditor.TextEditorForm.Save">
+ <summary>
+     Overwrites the existing file with text
+ </summary>
+</member>
+<member name="M:Lab5_TextEditor.TextEditorForm.Open">
+ <summary>
+     Opens a new file
+ </summary>
+</member>
+<member name="M:Lab5_TextEditor.TextEditorForm.Copy">
+ <summary>
+     Copies selected text to clipboard
+ </summary>
+</member>
+<member name="M:Lab5_TextEditor.TextEditorForm.Cut">
+ <summary>
+     Copies selected text to clipboard and deletes it from textbox
+ </summary>
+</member>
+<member name="M:Lab5_TextEditor.TextEditorForm.Paste">
+ <summary>
+     Retrieves text from clipboard and adds it to textbox
+ </summary>
+</member>
 </members>
 </doc>

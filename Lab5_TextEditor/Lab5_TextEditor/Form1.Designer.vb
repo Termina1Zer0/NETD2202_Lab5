@@ -71,37 +71,37 @@ Partial Class TextEditorForm
         'mnuNew
         '
         Me.mnuNew.Name = "mnuNew"
-        Me.mnuNew.Size = New System.Drawing.Size(196, 26)
+        Me.mnuNew.Size = New System.Drawing.Size(216, 26)
         Me.mnuNew.Text = "&New        Ctrl+N"
         '
         'mnuOpen
         '
         Me.mnuOpen.Name = "mnuOpen"
-        Me.mnuOpen.Size = New System.Drawing.Size(196, 26)
+        Me.mnuOpen.Size = New System.Drawing.Size(216, 26)
         Me.mnuOpen.Text = "&Open        Ctrl+O"
         '
         'mnuSave
         '
         Me.mnuSave.Name = "mnuSave"
-        Me.mnuSave.Size = New System.Drawing.Size(196, 26)
+        Me.mnuSave.Size = New System.Drawing.Size(216, 26)
         Me.mnuSave.Text = "&Save        Ctrl+S"
         '
         'mnuSaveAs
         '
         Me.mnuSaveAs.Name = "mnuSaveAs"
-        Me.mnuSaveAs.Size = New System.Drawing.Size(196, 26)
+        Me.mnuSaveAs.Size = New System.Drawing.Size(216, 26)
         Me.mnuSaveAs.Text = "Save &As"
         '
         'mnuClose
         '
         Me.mnuClose.Name = "mnuClose"
-        Me.mnuClose.Size = New System.Drawing.Size(196, 26)
+        Me.mnuClose.Size = New System.Drawing.Size(216, 26)
         Me.mnuClose.Text = "&Close"
         '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
-        Me.mnuExit.Size = New System.Drawing.Size(196, 26)
+        Me.mnuExit.Size = New System.Drawing.Size(216, 26)
         Me.mnuExit.Text = "E&xit"
         '
         'mnuEdit
@@ -121,7 +121,7 @@ Partial Class TextEditorForm
         '
         Me.mnuCut.Name = "mnuCut"
         Me.mnuCut.Size = New System.Drawing.Size(192, 26)
-        Me.mnuCut.Text = "C&ut        Ctrl+X"
+        Me.mnuCut.Text = "Cu&t        Ctrl+X"
         '
         'mnuPaste
         '
@@ -148,11 +148,13 @@ Partial Class TextEditorForm
         '
         'txtEditText
         '
-        Me.txtEditText.Location = New System.Drawing.Point(15, 46)
+        Me.txtEditText.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.txtEditText.ForeColor = System.Drawing.Color.White
+        Me.txtEditText.Location = New System.Drawing.Point(0, 28)
         Me.txtEditText.Multiline = True
         Me.txtEditText.Name = "txtEditText"
         Me.txtEditText.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtEditText.Size = New System.Drawing.Size(755, 391)
+        Me.txtEditText.Size = New System.Drawing.Size(782, 424)
         Me.txtEditText.TabIndex = 2
         Me.toolTipTextEditor.SetToolTip(Me.txtEditText, "Add, delete or edit text here.")
         '
@@ -160,6 +162,7 @@ Partial Class TextEditorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(782, 450)
         Me.Controls.Add(Me.txtEditText)
         Me.Controls.Add(Me.mnuEditorOptions)
