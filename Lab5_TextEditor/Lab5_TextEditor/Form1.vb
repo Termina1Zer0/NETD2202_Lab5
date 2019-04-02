@@ -15,8 +15,10 @@ Public Class TextEditorForm
         SaveFileDialog1.Filter = "TXT Files (*.txt)|*.txt"
         If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
             Try
-                My.Computer.FileSystem.WriteAllText(SaveFileDialog1.FileName, txtEditText.Text(), False)
+                Dim writer As New StreamWriter(SaveFileDialog1.FileName)
+                writer.Write(txtEditText.Text())
                 filename = SaveFileDialog1.FileName
+                writer.Close()
             Catch ex As Exception
                 Console.WriteLine(ex.ToString())
             End Try
@@ -74,7 +76,7 @@ Public Class TextEditorForm
     ''' </summary>
     Sub Paste()
         Try
-            txtEditText.Paste(My.Computer.Clipboard.GetText())
+            txtEditText.SelectedText = My.Computer.Clipboard.GetText()
         Catch ex As Exception
             Console.WriteLine(ex.ToString())
         End Try

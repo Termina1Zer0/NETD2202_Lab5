@@ -39,9 +39,9 @@ Partial Class TextEditorForm
         Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.txtEditText = New System.Windows.Forms.TextBox()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.toolTipTextEditor = New System.Windows.Forms.ToolTip(Me.components)
+        Me.txtEditText = New System.Windows.Forms.RichTextBox()
         Me.mnuEditorOptions.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -77,31 +77,31 @@ Partial Class TextEditorForm
         'mnuOpen
         '
         Me.mnuOpen.Name = "mnuOpen"
-        Me.mnuOpen.Size = New System.Drawing.Size(216, 26)
+        Me.mnuOpen.Size = New System.Drawing.Size(196, 26)
         Me.mnuOpen.Text = "&Open        Ctrl+O"
         '
         'mnuSave
         '
         Me.mnuSave.Name = "mnuSave"
-        Me.mnuSave.Size = New System.Drawing.Size(216, 26)
+        Me.mnuSave.Size = New System.Drawing.Size(196, 26)
         Me.mnuSave.Text = "&Save        Ctrl+S"
         '
         'mnuSaveAs
         '
         Me.mnuSaveAs.Name = "mnuSaveAs"
-        Me.mnuSaveAs.Size = New System.Drawing.Size(216, 26)
+        Me.mnuSaveAs.Size = New System.Drawing.Size(196, 26)
         Me.mnuSaveAs.Text = "Save &As"
         '
         'mnuClose
         '
         Me.mnuClose.Name = "mnuClose"
-        Me.mnuClose.Size = New System.Drawing.Size(216, 26)
+        Me.mnuClose.Size = New System.Drawing.Size(196, 26)
         Me.mnuClose.Text = "&Close"
         '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
-        Me.mnuExit.Size = New System.Drawing.Size(216, 26)
+        Me.mnuExit.Size = New System.Drawing.Size(196, 26)
         Me.mnuExit.Text = "E&xit"
         '
         'mnuEdit
@@ -149,14 +149,15 @@ Partial Class TextEditorForm
         'txtEditText
         '
         Me.txtEditText.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.txtEditText.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtEditText.Font = New System.Drawing.Font("Lucida Sans Unicode", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEditText.ForeColor = System.Drawing.Color.White
         Me.txtEditText.Location = New System.Drawing.Point(0, 28)
-        Me.txtEditText.Multiline = True
         Me.txtEditText.Name = "txtEditText"
-        Me.txtEditText.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtEditText.Size = New System.Drawing.Size(782, 424)
+        Me.txtEditText.Size = New System.Drawing.Size(782, 422)
         Me.txtEditText.TabIndex = 2
-        Me.toolTipTextEditor.SetToolTip(Me.txtEditText, "Add, delete or edit text here.")
+        Me.txtEditText.Text = ""
+        Me.toolTipTextEditor.SetToolTip(Me.txtEditText, "Create, edit and delete text")
         '
         'TextEditorForm
         '
@@ -182,7 +183,6 @@ Partial Class TextEditorForm
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents mnuOpen As ToolStripMenuItem
     Friend WithEvents mnuSave As ToolStripMenuItem
-    Friend WithEvents txtEditText As TextBox
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents mnuEdit As ToolStripMenuItem
     Friend WithEvents mnuHelp As ToolStripMenuItem
@@ -195,4 +195,5 @@ Partial Class TextEditorForm
     Friend WithEvents mnuPaste As ToolStripMenuItem
     Friend WithEvents mnuAbout As ToolStripMenuItem
     Friend WithEvents toolTipTextEditor As ToolTip
+    Friend WithEvents txtEditText As RichTextBox
 End Class
