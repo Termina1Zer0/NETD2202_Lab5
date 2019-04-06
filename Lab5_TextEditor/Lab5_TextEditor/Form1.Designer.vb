@@ -71,7 +71,7 @@ Partial Class TextEditorForm
         'mnuNew
         '
         Me.mnuNew.Name = "mnuNew"
-        Me.mnuNew.Size = New System.Drawing.Size(216, 26)
+        Me.mnuNew.Size = New System.Drawing.Size(196, 26)
         Me.mnuNew.Text = "&New        Ctrl+N"
         '
         'mnuOpen

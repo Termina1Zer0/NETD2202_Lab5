@@ -22,6 +22,11 @@ Lab5_TextEditor
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:Lab5_TextEditor.TextEditorForm.NewFile">
+ <summary>
+     Prepares the program for a new file
+ </summary>
+</member>
 <member name="M:Lab5_TextEditor.TextEditorForm.SaveAs">
  <summary>
      Prompts the SaveFileDialog box to save a new file

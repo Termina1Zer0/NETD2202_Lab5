@@ -9,6 +9,15 @@ Public Class TextEditorForm
 
 #Region "Functions and Subs"
     ''' <summary>
+    '''     Prepares the program for a new file
+    ''' </summary>
+    Sub NewFile()
+        txtEditText.Text() = ""
+        filename = ""
+        Me.Text = "Text Editor"
+    End Sub
+
+    ''' <summary>
     '''     Prompts the SaveFileDialog box to save a new file
     ''' </summary>
     Sub SaveAs()
@@ -18,6 +27,7 @@ Public Class TextEditorForm
                 Dim writer As New StreamWriter(SaveFileDialog1.FileName)
                 writer.Write(txtEditText.Text())
                 filename = SaveFileDialog1.FileName
+                Me.Text = Path.GetFileName(filename)
                 writer.Close()
             Catch ex As Exception
                 Console.WriteLine(ex.ToString())
@@ -41,6 +51,7 @@ Public Class TextEditorForm
                 Dim reader As New StreamReader(OpenFileDialog1.FileName)
                 txtEditText.Text() = reader.ReadToEnd()
                 filename = OpenFileDialog1.FileName
+                Me.Text = Path.GetFileName(filename)
                 reader.Close()
             Catch ex As Exception
                 Console.WriteLine(ex.ToString())
@@ -87,17 +98,14 @@ Public Class TextEditorForm
     Private Sub mnuNew_Click(sender As Object, e As EventArgs) Handles mnuNew.Click
         If My.Computer.FileSystem.FileExists(filename) = True Then      'Exists
             If My.Computer.FileSystem.ReadAllText(filename) = txtEditText.Text() Then
-                txtEditText.Text() = ""
-                filename = ""
+                NewFile()
             Else
                 Dim result As Integer = MessageBox.Show("Do you want to save changes?", "Text Editor", MessageBoxButtons.YesNoCancel)
                 If result = DialogResult.Yes Then
                     SaveAs()
-                    txtEditText.Text() = ""
-                    filename = ""
+                    NewFile()
                 ElseIf result = DialogResult.No Then
-                    txtEditText.Text() = ""
-                    filename = ""
+                    NewFile()
                 ElseIf result = DialogResult.Cancel Then
                     'Do nothing
                 End If
@@ -107,11 +115,9 @@ Public Class TextEditorForm
                 Dim result As Integer = MessageBox.Show("Do you want to save changes?", "Text Editor", MessageBoxButtons.YesNoCancel)
                 If result = DialogResult.Yes Then
                     SaveAs()
-                    txtEditText.Text() = ""
-                    filename = ""
+                    NewFile()
                 ElseIf result = DialogResult.No Then
-                    txtEditText.Text() = ""
-                    filename = ""
+                    NewFile()
                 ElseIf result = DialogResult.Cancel Then
                     'Do nothing
                 End If
